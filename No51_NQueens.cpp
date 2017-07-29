@@ -44,6 +44,7 @@ public:
             for (int j = 0; j < n; ++j) {
                 if (boards[i][j] == 1) {
                     queenColumns[i] = j;
+                    // one line will only have one q, so jump to next line
                     break;
                 }
             }

@@ -3,5 +3,5 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp  No54_SprialMatrix.cpp)
+set(SOURCE_FILES main.cpp  No54_SprialMatrix.cpp No55_SprialMatrix2.cpp  No51_NQueens.cpp)
 add_executable(untitled ${SOURCE_FILES})

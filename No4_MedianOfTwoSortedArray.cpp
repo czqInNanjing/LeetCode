@@ -51,6 +51,7 @@ public:
                 else
                     leftMax = nums1[i - 1] > nums2[j - 1] ? nums1[i - 1] : nums2[j - 1];
 
+                // deal with odd here, or we may get wrong if continue(error when two arrays have only one element)
                 if ( (m + n ) % 2 == 1)
                     return leftMax;
 

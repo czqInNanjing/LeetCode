@@ -10,28 +10,39 @@ using namespace std;
 class No53_MaxSubArray {
 public:
     int maxSubArray(vector<int>& nums) {
-        int lastMaxNum = 0;
-        int maxNum = 0;
-        int least = -2147483647;
-        for (int i = 0; i < nums.size(); ++i) {
+        int maxEndingHere = nums[0];
+        int maxSoFar = nums[0];
 
-            if ( nums[i] < 0 ) {
+        for (int i = 1; i < nums.size(); ++i) {
+            maxEndingHere = maxEndingHere + nums[i] > nums[i] ? maxEndingHere + nums[i] : nums[i];
+            maxSoFar = maxSoFar > maxEndingHere ? maxSoFar : maxEndingHere;
+        }
+        return maxSoFar;
 
-                if (lastMaxNum < maxNum) {
-                    lastMaxNum = maxNum;
-                }
-                if (maxNum + nums[i] < 0) {
-                    maxNum = 0;
-                } else {
-                    maxNum += nums[i];
-                }
-            } else {
-                maxNum += nums[i];
-            }
-        }
-        if (least < 0) {
-            return least;
-        }
-        return max(maxNum, lastMaxNum);
+//        int lastMaxNum = 0;
+//        int maxNum = 0;
+//        int least = -2147483647;
+//        for (int i = 0; i < nums.size(); ++i) {
+//            if (nums[i] > least) {
+//                least = nums[i];
+//            }
+//            if ( nums[i] < 0 ) {
+//
+//                if (lastMaxNum < maxNum) {
+//                    lastMaxNum = maxNum;
+//                }
+//                if (maxNum + nums[i] < 0) {
+//                    maxNum = 0;
+//                } else {
+//                    maxNum += nums[i];
+//                }
+//            } else {
+//                maxNum += nums[i];
+//            }
+//        }
+//        if (least < 0) {
+//            return least;
+//        }
+//        return max(maxNum, lastMaxNum);
     }
 };

@@ -2,19 +2,35 @@
 #include <vector>
 #include "No54_SprialMatrix.cpp"
 #include "No51_NQueens.cpp"
-#include "Exer1_DistanceBetweenTwoStrings.cpp"
+#include "dynamicProgramming/Exer1_DistanceBetweenTwoStrings.cpp"
+#include "dynamicProgramming/Exer2_LongestCommonSubsequence.cpp"
+#include "dynamicProgramming/Exer3_LongestIncreasingSubsequence.cpp"
 using namespace std;
 int main() {
 
-    Exer1_DistanceBetweenTwoString comparator;
-    vector<string> result;
-    string s1("sailn");
-    string s2("failing");
-    cout << comparator.distanceBetweenStrings(s1, s2 , result) << endl;
+    Exer3_LongestIncreasingSubsequence test;
+    int temp[] = {1,1,2,2,3,3,4,4};
+    cout << test.longestIncreasingSubsequence(temp, 8) << endl;
 
-    for(auto& temp: result) {
-        cout << temp << endl;
-    }
+//    Exer2_LongestCommonSubsequence comparator;
+//    string s1("ABCBDAB");
+//    string s2("BDCABA");
+//    vector<string> result = comparator.longestCommonSubsequence(s1, s2);
+//
+//    for(auto& temp: result) {
+//        cout << temp << endl;
+//    }
+
+
+//    Exer1_DistanceBetweenTwoString comparator;
+//    vector<string> result;
+//    string s1("abcde");
+//    string s2("bcd");
+//    cout << comparator.distanceBetweenStrings(s1, s2 , result) << endl;
+//
+//    for(auto& temp: result) {
+//        cout << temp << endl;
+//    }
 
 
 

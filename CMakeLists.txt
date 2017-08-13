@@ -4,5 +4,5 @@ project(untitled)
 set(CMAKE_CXX_STANDARD 11)
 
 
-set(SOURCE_FILES main.cpp  No54_SprialMatrix.cpp No55_SprialMatrix2.cpp  No51_NQueens.cpp No53_MaxSubarray.cpp No55_JumpGame.cpp No45_JumpGame2.cpp No1_TwoSum.cpp No2_AddTwoInteger.cpp No3_LongestSubStrWithoutRepeatChar.cpp No4_MedianOfTwoSortedArray.cpp No26_RemoveDuplicateNumberFromSortedArray.cpp dynamicProgramming/No32_LongestValidParentheses.cpp Exer1_DistanceBetweenTwoStrings.cpp)
+set(SOURCE_FILES main.cpp  No54_SprialMatrix.cpp No55_SprialMatrix2.cpp  No51_NQueens.cpp No53_MaxSubarray.cpp No55_JumpGame.cpp No45_JumpGame2.cpp No1_TwoSum.cpp No2_AddTwoInteger.cpp No3_LongestSubStrWithoutRepeatChar.cpp No4_MedianOfTwoSortedArray.cpp No26_RemoveDuplicateNumberFromSortedArray.cpp dynamicProgramming/No32_LongestValidParentheses.cpp dynamicProgramming/Exer1_DistanceBetweenTwoStrings.cpp dynamicProgramming/Exer2_LongestCommonSubsequence.cpp dynamicProgramming/Exer3_LongestIncreasingSubsequence.cpp)
 add_executable(untitled ${SOURCE_FILES})

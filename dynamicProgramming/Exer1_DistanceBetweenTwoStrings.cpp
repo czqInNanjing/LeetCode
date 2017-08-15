@@ -32,7 +32,10 @@
 #include <vector>
 #include <iostream>
 using namespace std;
-
+// 这道题是  编辑距离 题目的完整题型，使用了动态规划的思想
+//  string erase 会影响自己本身
+// 这道题的一个难点是一个打印转换过程，难度主要在于你只能记录每一步的过程，回溯的时候要理解是对应的字符做相应的修改
+// 动态数组记得回收内存
 
 class Exer1_DistanceBetweenTwoString {
 public:

@@ -15,6 +15,12 @@
 
 using namespace std;
 
+/*
+ * 这道题通常作为动态规划的入门题型，普通的思路是存储到每个字符的最大子序列递增长度
+ * a[i] = max{ a[i - 1] + 1 , array[i] > array[i - 1]}   时间复杂度O(n^2)
+ * 这道题换了个思路，用一张表记录各个递增子序列长度的最后一位数的最小值，通过二分法查找，降低到 O(n*logn)
+ * 现在是不减子序列，注释掉的部分是递增子序列
+ */
 class Exer3_LongestIncreasingSubsequence {
 
 public:
@@ -30,7 +36,7 @@ public:
 
             int tempMaxLen = binarySearch(minEleWithMaxLen, result - 1, array[i]);
 
-            if(tempMaxLen != -2) {
+            if(tempMaxLen != -1) {
                 // 相等的元素被无视，然后查找该元素大于的第一个元素，然后替换掉它的下一个位置（如果没有，替换掉0号位置）
                 minEleWithMaxLen[tempMaxLen] = array[i];
                 if(tempMaxLen == result) {
@@ -53,14 +59,21 @@ private:
         while(start <= end) {
             int mid = (start + end) / 2;
 
-            if (valueToFind == array[mid]) {
-                return -1;
-            } else if( valueToFind > array[mid]) {
+            if( valueToFind >= array[mid]) {
                 result = mid + 1;
                 start = mid + 1;
             } else {
                 end = mid - 1;
             }
+
+//            if (valueToFind == array[mid]) {
+//                return -1;
+//            } else if( valueToFind > array[mid]) {
+//                result = mid + 1;
+//                start = mid + 1;
+//            } else {
+//                end = mid - 1;
+//            }
         }
 
 

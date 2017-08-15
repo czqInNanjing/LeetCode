@@ -9,8 +9,8 @@ using namespace std;
 int main() {
 
     Exer3_LongestIncreasingSubsequence test;
-    int temp[] = {1,1,2,2,3,3,4,4};
-    cout << test.longestIncreasingSubsequence(temp, 8) << endl;
+    int temp[] = {1,1,2,2,3,3,4,4,5, 3 , 7 , 5, 7, 7};
+    cout << test.longestIncreasingSubsequence(temp, 14) << endl;
 
 //    Exer2_LongestCommonSubsequence comparator;
 //    string s1("ABCBDAB");

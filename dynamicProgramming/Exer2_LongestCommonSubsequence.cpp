@@ -19,7 +19,7 @@
 #include <vector>
 #include <iostream>
 using namespace std;
-
+// 这道题的一个难点在于打印所有的公共子序列，主要是在有两种可能的时候需要分别递归调用
 class Exer2_LongestCommonSubsequence {
 
 public:

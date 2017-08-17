@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "No54_SprialMatrix.cpp"
-#include "No51_NQueens.cpp"
+#include "backTrack/No51_Hard_NQueens.cpp"
 #include "dynamicProgramming/Exer1_DistanceBetweenTwoStrings.cpp"
 #include "dynamicProgramming/Exer2_LongestCommonSubsequence.cpp"
 #include "dynamicProgramming/Exer3_LongestIncreasingSubsequence.cpp"
@@ -38,7 +38,7 @@ int main() {
     /*
      *
      */
-//    No51_NQueens nQueens;
+//    No51_Hard_NQueens nQueens;
 //
 //    vector<vector<string>> result = nQueens.solveNQueens(8);
 //

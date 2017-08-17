@@ -29,7 +29,7 @@
 using namespace std;
 
 
-class No51_NQueens {
+class No51_Hard_NQueens {
 public:
 
 

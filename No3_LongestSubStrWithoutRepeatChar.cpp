@@ -15,7 +15,18 @@
 using namespace std;
 class No3_LongestSubStrWithoutRepeatChar {
 
+
+
+
 public:
+    // 这道题的本质是维护一个窗口，窗口内部不存在重复的字符，出现重复的字符的时候，就向右移动，移动新遇到的字符在这个窗口内部的重复字符的下一个位置
+    /*
+     * the basic idea is, keep a hashmap which stores the characters in string as keys and their positions as values,
+     * and keep two pointers which define the max substring. move the right pointer to scan through the string ,
+     * and meanwhile update the hashmap. If the character is already in the hashmap,
+     * then move the left pointer to the right of the same character last found.
+     * Note that the two pointers can only move forward.
+     */
     int lengthOfLongestSubstring(string s) {
         int maxNum = 1;
         map<char, int> charMap;

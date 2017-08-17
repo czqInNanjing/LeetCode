@@ -2,6 +2,7 @@
 // Created by Qiang Chen on 8/17/17.
 //
 #include <vector>
+#include <set>
 using namespace std;
 //Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
 //
@@ -18,9 +19,5 @@ using namespace std;
 //[2, 6],
 //[1, 1, 6]
 //]
-class No40_Medium_CombinationSum2{
-public:
-    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
-
-    }
+class No40_Medium_CombinationSum2 {
 };

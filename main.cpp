@@ -5,12 +5,16 @@
 #include "dynamicProgramming/Exer1_DistanceBetweenTwoStrings.cpp"
 #include "dynamicProgramming/Exer2_LongestCommonSubsequence.cpp"
 #include "dynamicProgramming/Exer3_LongestIncreasingSubsequence.cpp"
+#include "backTrack/No47_Medium_Permutation2.cpp"
 using namespace std;
 int main() {
+    vector<int> temp = {1,1,4,4};
+    No47_Medium_Permutation2 permutation;
+    permutation.permuteUnique(temp);
 
-    Exer3_LongestIncreasingSubsequence test;
-    int temp[] = {1,1,2,2,3,3,4,4,5, 3 , 7 , 5, 7, 7};
-    cout << test.longestIncreasingSubsequence(temp, 14) << endl;
+//    Exer3_LongestIncreasingSubsequence test;
+//    int temp[] = {1,1,2,2,3,3,4,4,5, 3 , 7 , 5, 7, 7};
+//    cout << test.longestIncreasingSubsequence(temp, 14) << endl;
 
 //    Exer2_LongestCommonSubsequence comparator;
 //    string s1("ABCBDAB");

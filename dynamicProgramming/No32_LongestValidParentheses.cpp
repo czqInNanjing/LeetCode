@@ -26,7 +26,7 @@ class No32_LongestValidParentheses {
 
 public:
     int longestValidParentheses(string s) {
-        vector<int> longest(n, 0);
+        vector<int> longest(s.length(), 0);
         int max = 0;
 
         for (int i = 1; i < s.length(); ++i) {

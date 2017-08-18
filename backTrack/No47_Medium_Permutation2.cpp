@@ -24,13 +24,13 @@ public:
         vector<vector<int>> result;
         vector<int> tempResult;
         sort(nums.begin(), nums.end());
-        bool used[nums.size()] = {false};
+        vector<bool> used(nums.size(), false);
         permute(result, nums, tempResult, used);
 
         return result;
     }
 private:
-    static void permute(vector<vector<int>> &result, vector<int>& nums, vector<int>& tempResult, bool *used) {
+    static void permute(vector<vector<int>> &result, vector<int>& nums, vector<int>& tempResult, vector<bool> &used) {
 
         if(tempResult.size() == nums.size()){
             result.push_back(tempResult);

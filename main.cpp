@@ -6,11 +6,18 @@
 #include "dynamicProgramming/Exer2_LongestCommonSubsequence.cpp"
 #include "dynamicProgramming/Exer3_LongestIncreasingSubsequence.cpp"
 #include "backTrack/No47_Medium_Permutation2.cpp"
+#include "No42_Hard_TrappingRainWater.cpp"
 using namespace std;
 int main() {
-    vector<int> temp = {1,1,4,4};
-    No47_Medium_Permutation2 permutation;
-    permutation.permuteUnique(temp);
+
+    No42_Hard_TrappingRainWater test;
+    vector<int> temp =  {4,2,0,3,2,5};
+    cout << test.trap(temp);
+
+
+//    vector<int> temp = {1,1,4,4};
+//    No47_Medium_Permutation2 permutation;
+//    permutation.permuteUnique(temp);
 
 //    Exer3_LongestIncreasingSubsequence test;
 //    int temp[] = {1,1,2,2,3,3,4,4,5, 3 , 7 , 5, 7, 7};

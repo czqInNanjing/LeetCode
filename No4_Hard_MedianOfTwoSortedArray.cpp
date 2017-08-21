@@ -15,10 +15,10 @@
 //nums2 = [3, 4]
 //
 //The median is (2 + 3)/2 = 2.5
-#import "vector"
+#import <vector>
 using namespace std;
 // key of this problem: median means to split to array into two parts and compute the average of leftMax and rightMin
-class No4_MedianOfTwoSortedArray {
+class No4_Hard_MedianOfTwoSortedArray {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         int m = nums1.size();

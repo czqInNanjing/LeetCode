@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
+#include <map>
 #include "No54_SprialMatrix.cpp"
+#include <queue>
 #include "backTrack/No51_Hard_NQueens.cpp"
 #include "dynamicProgramming/Exer1_DistanceBetweenTwoStrings.cpp"
 #include "dynamicProgramming/Exer2_LongestCommonSubsequence.cpp"
@@ -9,10 +11,16 @@
 #include "No42_Hard_TrappingRainWater.cpp"
 using namespace std;
 int main() {
+    map<int, vector<int>> map1;
+    cout << map1[0].size();
+    vector<int> tempVec;
+    priority_queue<int> queue1;
 
-    No42_Hard_TrappingRainWater test;
-    vector<int> temp =  {4,2,0,3,2,5};
-    cout << test.trap(temp);
+
+
+//    No42_Hard_TrappingRainWater test;
+//    vector<int> temp =  {4,2,0,3,2,5};
+//    cout << test.trap(temp);
 
 
 //    vector<int> temp = {1,1,4,4};

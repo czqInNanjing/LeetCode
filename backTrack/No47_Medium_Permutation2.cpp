@@ -16,10 +16,30 @@ using namespace std;
 
 class No47_Medium_Permutation2 {
 
+
+    /* 最简写法
+     *
+public:
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+
+        vector<vector<int>> result;
+        result.push_back(nums);
+        vector<int> tempResult(nums);
+
+        while(next_permutation(tempResult.begin(), tempResult.end())) {
+            result.push_back(tempResult);
+        }
+
+        return result;
+
+    }
+     */
 public:
     static vector<vector<int>> permuteUnique(vector<int>& nums) {
         if(nums.empty())
             return vector<vector<int>>();
+
 
         vector<vector<int>> result;
         vector<int> tempResult;

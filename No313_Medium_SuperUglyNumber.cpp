@@ -27,7 +27,7 @@ public:
             int minNum = factors[0];
             minIndex.clear();
             minIndex.push_back(0);
-            
+
             for(int j = 1 ; j < factors.size() ; ++j ) {
                 if(minNum > factors[j]) {
                     minNum = factors[j];

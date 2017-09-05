@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <string>
 #include "No54_SprialMatrix.cpp"
 #include <queue>
 #include <set>
@@ -12,21 +13,29 @@
 #include "No42_Hard_TrappingRainWater.cpp"
 #include "No264_Medium_UglyNumber2.cpp"
 #include "No313_Medium_SuperUglyNumber.cpp"
+#include "dynamicProgramming/No115_Hard_DistinctSequences.cpp"
+#include "No282_Hard_ExpressionAddOperators.cpp"
 using namespace std;
 int main() {
-    map<int, vector<int>> map1;
-//    cout << map1[0].size();
-    vector<int> tempVec;
-    queue<int> queue1;
-    set<int> set1;
 
-No313_Medium_SuperUglyNumber test;
-    vector<int> temp =  {2,3,5,7};
+    No115_Hard_DistinctSequences test;
+    cout << test.numDistinct("daacaedaceacabbaabdccdaaeaebacddadcaeaacadbceaecddecdeedcebcdacdaebccdeebcbdeaccabcecbeeaadbccbaeccbbdaeadecabbbedceaddcdeabbcdaeadcddedddcececbeeabcbecaeadddeddccbdbcdcbceabcacddbbcedebbcaccac"
+                                     ,"ceadbaa");
 
-     test.nthSuperUglyNumber(10, temp);
-cout << endl;
-    No264_Medium_UglyNumber2 test2;
-     test2.nthUglyNumber(20);
+
+//    map<int, vector<int>> map1;
+////    cout << map1[0].size();
+//    vector<string> tempVec;
+//    queue<int> queue1;
+//    set<int> set1;
+//
+//    No282_Hard_ExpressionAddOperators test;
+//    tempVec = test.addOperators("123",6 );
+//    for (int i = 0; i < tempVec.size(); ++i) {
+//        cout << tempVec[i] << endl;
+//    }
+
+
 //    No42_Hard_TrappingRainWater test;
 //    vector<int> temp =  {4,2,0,3,2,5};
 //    cout << test.trap(temp);

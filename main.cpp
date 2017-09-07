@@ -14,13 +14,20 @@
 #include "No264_Medium_UglyNumber2.cpp"
 #include "No313_Medium_SuperUglyNumber.cpp"
 #include "dynamicProgramming/No115_Hard_DistinctSequences.cpp"
+#include "dynamicProgramming/No120_Medium_Triangle.cpp"
+#include "dynamicProgramming/No123_Hard_BestTimeToBuyAndSellStocksIII.cpp"
+#include "graph/No127_Medium_WordLadder.cpp"
+#include "graph/No126_Hard_WordLadderII.cpp"
+#include "graph/No130_Medium_SurroundedRegions.cpp"
+#include "No132_Hard_PalindromePartitioningII.cpp"
 #include "No282_Hard_ExpressionAddOperators.cpp"
 using namespace std;
 int main() {
 
-    No115_Hard_DistinctSequences test;
-    cout << test.numDistinct("daacaedaceacabbaabdccdaaeaebacddadcaeaacadbceaecddecdeedcebcdacdaebccdeebcbdeaccabcecbeeaadbccbaeccbbdaeadecabbbedceaddcdeabbcdaeadcddedddcececbeeabcbecaeadddeddccbdbcdcbceabcacddbbcedebbcaccac"
-                                     ,"ceadbaa");
+    No132_Hard_PalindromePartitioningII test;
+    cout << test.minCut("fifgbeajcacehiicccfecbfhhgfiiecdcjjffbghdidbhbdbfbfjccgbbdcjheccfbhafehieabbdfeigbiaggchaeghaijfbjhi") << endl;
+    cout << test.minCut("ababa");
+//    test.minimumTotal()
 
 
 //    map<int, vector<int>> map1;

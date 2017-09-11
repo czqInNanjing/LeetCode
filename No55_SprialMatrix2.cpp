@@ -22,7 +22,8 @@ class No55_SprialMatrix2 {
 public:
     vector<vector<int>> generateMatrix(int n) {
 
-
+        string s;
+        
 
 
     }

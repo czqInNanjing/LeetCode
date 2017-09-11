@@ -16,6 +16,7 @@
 // 不能算回溯的题目，但是可以用在解回溯的题目 No46,47 从开始一个一个寻找下一个permutation直到回到最开始就可以了，时间效率也还可以吧
 //
 #include <vector>
+#include <sstream>
 using namespace std;
 class No31_Medium_NextPermutation{
 public:
@@ -30,7 +31,7 @@ public:
                 break;
             }
         }
-
+        
         if(index == -1 ) {
             reverse(nums.begin(), nums.end());
             return;

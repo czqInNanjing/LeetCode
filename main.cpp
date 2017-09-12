@@ -23,12 +23,12 @@
 #include "No282_Hard_ExpressionAddOperators.cpp"
 #include "No134_Medium_GasStation.cpp"
 using namespace std;
-int main() {
-
-    No134_Medium_GasStation test2;
-    vector<int> temp1 = {99,98,97,100};
-    vector<int> temp2 = {100,100,100,97};
-    cout << test2.canCompleteCircuit(temp1, temp2) << "asdfa";
+//int main() {
+//
+//    No134_Medium_GasStation test2;
+//    vector<int> temp1 = {99,98,97,100};
+//    vector<int> temp2 = {100,100,100,97};
+//    cout << test2.canCompleteCircuit(temp1, temp2) << "asdfa";
 
 
 //    No132_Hard_PalindromePartitioningII test;
@@ -122,4 +122,4 @@ int main() {
 //    std::cout << "Hello, World!" << std::endl;
 //
 //    return 0;
-}
+//}

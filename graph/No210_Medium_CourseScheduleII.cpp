@@ -37,7 +37,13 @@ public:
 
     }
 
-
+    vector<unordered_set<int>> make_graph(int course, vector<pair<int, int>>& prerequisites) {
+        vector<unordered_set<int>> graph(course);
+        for(auto& edge : prerequisites) {
+            graph[edge.second].insert(edge.first);
+        }
+        return graph;
+    }
 
 
     vector<int> bfs(vector<unordered_set<int>>& graph) {

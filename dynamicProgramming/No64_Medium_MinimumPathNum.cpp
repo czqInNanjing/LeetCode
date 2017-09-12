@@ -14,13 +14,15 @@
 #include <vector>
 
 using namespace std;
-class No64_MinimumPathNums {
+class No64_Medium_MinimumPathNums {
 public:
     int minPathSum(vector<vector<int>>& grid) {
         vector<vector<int>> result;
         vector<int> tempResult;
         int m = grid.size();
         int n = grid[0].size();
+
+        // column0
         for( int i = 0 ; i < m ; i++ ) {
             if ( i == 0 ) {
                 tempResult.push_back(grid[i][0]);
@@ -30,6 +32,7 @@ public:
             result.push_back(tempResult);
             tempResult.clear();
         }
+        // row0
         for( int i = 1 ; i < n ; i++ ) {
             result[0].push_back(grid[0][i] + result[0][i - 1]);
         }

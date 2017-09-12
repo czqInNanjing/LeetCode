@@ -18,7 +18,7 @@
 using namespace std;
 using std::vector;
 
-class No55_SprialMatrix2 {
+class No59_Medium_SprialMatrix2 {
 public:
     vector<vector<int>> generateMatrix(int n) {
 

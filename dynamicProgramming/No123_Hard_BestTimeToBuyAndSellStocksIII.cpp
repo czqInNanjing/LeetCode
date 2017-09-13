@@ -7,9 +7,35 @@
 using namespace std;
 class No123_Hard_BestTimeToBuyAndSellStocksIII {
 public:
-//     f[k, ii] = max(f[k, ii-1], prices[ii] - prices[jj] + f[k-1, jj]) { jj in range of [0, ii-1] }
+    /*
+     * 来尝试一下解释这道题吧：
+     * 1. dp[K][n] 表示进行第K次交易后在第n天的最大利润
+     * 2. dp[K][n] = max(dp[K][n - 1], dp[K - 1][n - j] + prices[n] - prices[j])  1 <= j <= n  定义为进行K次交易在第n天的最大利润为 进行K - 1 次交易后某天买入现在卖出（第n天卖出，则前面某天买入） 或者 K 次交易 n - 1天的利润
+     *    或者 dp[K][n] = max(dp[K][n - 1], dp[K - 1][j] + prices[n] - prices[j])  j = [0, n - 1]
+     * 3. 如果正常计算dp的话 为o(n^3) 因为每个状态需要n次确定，但是j从低到高计算的值可以累计，变为O(n^2)，于是有了下面的代码
+     * 4. 这道题之所以K放在n前面是有原因，状态转移方程最好是前一次的状态进行转移，因此K放在前面更加好定义
+     */
     int maxProfit(vector<int>& prices) {
-        return 0;
+        if (prices.size() <= 1) return 0;
+        else {
+            int K = 2; // number of max transaction allowed
+            int maxProf = 0;
+            vector<vector<int>> f(K+1, vector<int>(prices.size(), 0));
+            for (int kk = 1; kk <= K; kk++) {
+                int tmpMax = f[kk-1][0] - prices[0];
+                for (int ii = 1; ii < prices.size(); ii++) {
+                    f[kk][ii] = max(f[kk][ii-1], prices[ii] + tmpMax);
+                    tmpMax = max(tmpMax, f[kk-1][ii] - prices[ii]);
+                    maxProf = max(f[kk][ii], maxProf);
+                }
+            }
+            return maxProf;
+        }
+    }
+//public:
+//     f[k, ii] = max(f[k, ii-1], prices[ii] - prices[jj] + f[k-1, jj]) { jj in range of [0, ii-1] }
+//    int maxProfit(vector<int>& prices) {
+//        return 0;
 //        if(prices.size() <= 1) return 0;
 //        int n = prices.size();
 //        int MAX_TIME = 2;
@@ -73,5 +99,5 @@ public:
 //            result = max(result, profitDp[n][j]);
 //        }
 //        return result;
-    }
+//    }
 };

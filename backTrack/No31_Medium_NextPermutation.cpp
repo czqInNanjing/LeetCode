@@ -32,7 +32,7 @@ public:
             }
         }
         
-        if(index == -1 ) {
+        if(index == -1 ) { // 刚好是降序排列
             reverse(nums.begin(), nums.end());
             return;
         }

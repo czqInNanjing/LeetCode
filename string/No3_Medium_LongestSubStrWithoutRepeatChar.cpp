@@ -13,7 +13,7 @@
 #import "string"
 #import "map"
 using namespace std;
-class No3_LongestSubStrWithoutRepeatChar {
+class No3_Medium_LongestSubStrWithoutRepeatChar {
 
 
 

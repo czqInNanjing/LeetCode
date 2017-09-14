@@ -14,7 +14,7 @@
 #import <string>
 #import "unordered_map"
 using namespace std;
-class No1_TwoSum {
+class No1_Easy_TwoSum {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         unordered_map<int, int> intMap;

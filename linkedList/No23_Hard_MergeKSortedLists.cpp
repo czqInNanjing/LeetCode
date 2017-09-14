@@ -52,7 +52,7 @@ private:
         return head.next;
     }
 
-
+// 比较慢的方法 AC 249ms
 //public:
 //    ListNode* mergeKLists(vector<ListNode*>& lists) {
 //        if(lists.empty())

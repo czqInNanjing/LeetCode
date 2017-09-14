@@ -16,7 +16,7 @@
 
 #include <string>
 using namespace std;
-class No_Medium_ZigZagConversion {
+class No6_Medium_ZigZagConversion {
 public:
     string convert(string s, int numRows) {
         string result="";

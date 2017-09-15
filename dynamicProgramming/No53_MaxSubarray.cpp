@@ -7,6 +7,10 @@
 //        the contiguous subarray [4,-1,2,1] has the largest sum = 6.
 #include "vector"
 using namespace std;
+
+/*
+ * DP的简化版，只是把内存简化到O(1)而已
+ */
 class No53_MaxSubArray {
 public:
     int maxSubArray(vector<int>& nums) {

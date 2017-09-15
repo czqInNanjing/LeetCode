@@ -74,7 +74,7 @@ public:
             for (int s = 1; s < n + 1; ++s) {
                 int d = s1[r] == s2[s] ? 0 : 1;
                 timesArray[r][s] = tempResult[0] = timesArray[r - 1][s] + 1;
-                operationArray[r][s] = options[0];
+                               operationArray[r][s] = options[0];
                 tempResult[1] = timesArray[r][s - 1] + 1;
                 tempResult[2] = timesArray[r - 1][s - 1] + d;
 

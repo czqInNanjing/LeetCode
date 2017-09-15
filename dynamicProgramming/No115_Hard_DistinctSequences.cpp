@@ -7,7 +7,10 @@
 using namespace std;
 class No115_Hard_DistinctSequences{
 public:
-
+    /*
+     * 隔了八天，自己写的代码都不认识了。。。。。。。
+     * dp[i][j] 代表s第（0 ~ i - 1） t 第 （0 ~ j） 字符不同的数量
+     */
     int numDistinct(string s, string t) {
         if(s.empty() || t.empty()) return 0;
         if(s.length() < t.length()) return 0;

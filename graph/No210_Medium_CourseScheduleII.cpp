@@ -34,7 +34,6 @@ public:
         result.push_back(vertex);
         onPath[vertex] = false;
         return true;
-
     }
 
     vector<unordered_set<int>> make_graph(int course, vector<pair<int, int>>& prerequisites) {

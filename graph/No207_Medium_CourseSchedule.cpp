@@ -4,6 +4,11 @@
 #include <vector>
 #include <unordered_set>
 using namespace std;
+/*
+ * 这道题非常的重要，给出了判定有向图中是否有环的方法，或者找出一个可能的拓扑排序
+ * BFS: 不断去除indegree为0的点，直到集合为空，如果不能找到下一个点，那么有环。否则删除的顺序就是一个拓扑排序
+ * DFS: 从所有点开始DFS如果在路径中出现了重复的点，那么就是有环。寻找拓扑排序的方法就是进行DFS后将当前节点推入，最后再逆序即可
+ */
 class No207_Medium_CourseSchedule{
 public:
     bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites) {

@@ -6,7 +6,10 @@
 using namespace std;
 class No128_Hard_LongestConsecutiveSequence{
 
-
+/*
+ * Union-Find
+ *
+ */
 public:
     int longestConsecutive(vector<int>& nums) {
         if(nums.empty()) return 0;

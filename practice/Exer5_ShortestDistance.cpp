@@ -19,35 +19,35 @@ using namespace std;
 int computeBFS(unordered_map<int, vector<int>> graph, unordered_map<int, vector<int>> weight, int start, int end);
 
 
-int main() {
-
-    int n;
-    cin >> n;
-    unordered_map<int, int> nameMap;   // name - > id
-    unordered_map<int, vector<int>> graph;
-    unordered_map<int, vector<int>> weight;
-    int x, y, dis;
-    int vertexIndex = 0;
-    for (int i = 0; i < n; ++i) {
-        cin >> x >> y >> dis;
-        if(nameMap.count(x)) x = nameMap[x];
-        else x = nameMap[x] = vertexIndex++;
-        if(nameMap.count(y)) y = nameMap[y];
-        else y = nameMap[y] = vertexIndex++;
-
-        graph[x].push_back(y);
-        weight[x].push_back(dis);
-        graph[y].push_back(x);
-        weight[y].push_back(dis);
-    }
-    int start, end;
-    cin >> start >> end;
-    start = nameMap[start];
-    end = nameMap[end];
-    int result = computeBFS(graph, weight, start, end);
-    if(result == INT_MAX) return -1;
-    return result;
-}
+//int main() {
+//
+//    int n;
+//    cin >> n;
+//    unordered_map<int, int> nameMap;   // name - > id
+//    unordered_map<int, vector<int>> graph;
+//    unordered_map<int, vector<int>> weight;
+//    int x, y, dis;
+//    int vertexIndex = 0;
+//    for (int i = 0; i < n; ++i) {
+//        cin >> x >> y >> dis;
+//        if(nameMap.count(x)) x = nameMap[x];
+//        else x = nameMap[x] = vertexIndex++;
+//        if(nameMap.count(y)) y = nameMap[y];
+//        else y = nameMap[y] = vertexIndex++;
+//
+//        graph[x].push_back(y);
+//        weight[x].push_back(dis);
+//        graph[y].push_back(x);
+//        weight[y].push_back(dis);
+//    }
+//    int start, end;
+//    cin >> start >> end;
+//    start = nameMap[start];
+//    end = nameMap[end];
+//    int result = computeBFS(graph, weight, start, end);
+//    if(result == INT_MAX) return -1;
+//    return result;
+//}
 
 int computeBFS(unordered_map<int, vector<int>> graph, unordered_map<int, vector<int>> weight, int start, int end) {
 

@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include <cstring>
 using namespace std;
 struct BigInteger {
     const static int BASE = 100000000;
@@ -11,15 +12,17 @@ struct BigInteger {
     vector<int> s;
     BigInteger(long long num = 0) {*this = num;}
     BigInteger(string s) {*this = s;}
-    BigInteger operator = (long long num) {
+    BigInteger& operator = (long long num) {
         s.clear();
+
         do {
             s.push_back(num%BASE);
             num = num / BASE;
         } while (num > 0);
         return *this;
     }
-    BigInteger operator = (string str) {
+
+    BigInteger& operator = (string str) {
         int len = (str.length() - 1) / WIDTH + 1;
         s.clear();
         for (int i = 0; i < len; ++i) {
@@ -46,10 +49,13 @@ struct BigInteger {
     }
 };
 
-//int main() {
+int main() {
 //    string s = "123456789";
 //    BigInteger big = s;
-//    cout << big;
-//
-//
-//}
+//    BigInteger bi2 = 123;
+//    cout << big << bi2;
+    string temp = "12345";
+
+    cout << atoi(temp.c_str());
+
+}

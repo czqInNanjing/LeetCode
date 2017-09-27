@@ -6,47 +6,39 @@ using namespace std;
 class No135_Hard_Candy{
 public:
     int candy(vector<int>& ratings) {
-        if(ratings.empty()) return 0;
+        if(ratings.size() <= 1)
+            return ratings.size();
 
         int n = ratings.size();
-        vector<int> candy(n, 1);
-        for (int i = 0; i < n; ++i) {
-            bool left = checkLeft(ratings,candy,i);
-            bool right = checkRight(ratings, candy, i);
 
-            if(left && right)
-                continue;
-            else {
-                if(!left && !right) { //
-                    candy[i] = max(candy[i - 1], candy[i + 1]) + 1;
-                } else if(!left) {   // ratings[i] > ratings[i - 1] but candy[i] <= candy[i - 1]
-                    candy[i] = candy[i - 1] + 1;
-                    if(checkRight(ratings, candy, i))
-                        continue;
-                    else { // backtrack
-
-                    }
-                } else { // !right
-                    candy[i] = candy[i + 1] + 1;
-                    if (checkLeft(ratings, candy, i))
-                        continue;
-                    else {
-
-                    }
+        int pre = 1;
+        int total = 1;
+        int countDown = 0;
+        for(int i = 1; i < n; ++i ) {
+            if(ratings[i] >= ratings[i - 1]) {
+                if(countDown) {
+                    int downNum = (1 + countDown)*countDown/2;
+                    total += downNum;
+                    if(countDown >= pre) total += countDown - pre + 1;
+                    countDown = 0;
+                    pre = 1;
                 }
+                if(ratings[i] > ratings[i - 1])  pre += 1;
+                else pre = 1;
+
+                total += pre;
+            } else {
+                countDown++;
             }
 
 
         }
-
-
+        if(countDown) {
+            int downNum = (1 + countDown)*countDown/2;
+            total += downNum;
+            if(countDown >= pre) total += countDown - pre + 1;
+        }
+        return total;
 
     }
-    bool checkLeft(vector<int>& ratings, vector<int>& candy, int i) {
-        return i == 0 || ratings[i] <= ratings[i - 1] || candy[i] > candy[i - 1];
-    }
-    bool checkRight(vector<int>& ratings, vector<int>& candy, int i) {
-        return i == ratings.size() - 1 || ratings[i] <= ratings[i + 1] || candy[i] > candy[i + 1];
-    }
-
 };

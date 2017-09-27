@@ -55,29 +55,29 @@ int computeBFS(unordered_map<int, vector<int>> graph, unordered_map<int, vector<
 
 
     // Disjska
-//    vector<int> disFromStart(graph.size(), INT_MAX);
-//    vector<bool> visited(graph.size(), false);
-//    disFromStart[start] = 0;
-//
-//    visited[start] = true;
-//    queue<int> que;
-//    que.push(start);
-//
-//    while(!que.empty()) {
-//        int next = que.front(); que.pop();
-//
-//        for (int i = 0; i < graph[next].size(); ++i) {
-//            int& des = graph[next][i];
-//
-//            disFromStart[des] = min(disFromStart[des], disFromStart[next] + weight[next][i]);
-//            if(!visited[des]) {
-//                que.push(des);
-//                visited[des] = true;
-//            }
-//        }
-//    }
-//
-//    return disFromStart[end];
+    vector<int> disFromStart(graph.size(), INT_MAX);
+    vector<bool> visited(graph.size(), false);
+    disFromStart[start] = 0;
+
+    visited[start] = true;
+    queue<int> que;
+    que.push(start);
+
+    while(!que.empty()) {
+        int next = que.front(); que.pop();
+
+        for (int i = 0; i < graph[next].size(); ++i) {
+            int& des = graph[next][i];
+
+            disFromStart[des] = min(disFromStart[des], disFromStart[next] + weight[next][i]);
+            if(!visited[des]) {
+                que.push(des);
+                visited[des] = true;
+            }
+        }
+    }
+
+    return disFromStart[end];
 
 
 

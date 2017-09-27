@@ -9,7 +9,9 @@
 using namespace std;
 //http://www.geeksforgeeks.org/largest-rectangle-under-histogram/
 int getMaxArea(vector<int> val) {
-
+    /*
+     * 计算方式：对于每个矩形，计算向两边拓展的最大距离，故最大宽度不能小于该矩形的高，right 很简单，遇到比你矮的就开始计算，左边始终存储比你低的第一个数
+     */
 	if (val.empty()) return 0;
 	stack<int> sta;
 	int currentMax = 0;

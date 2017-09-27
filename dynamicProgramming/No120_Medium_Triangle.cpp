@@ -9,7 +9,7 @@ public:
     int minimumTotal(vector<vector<int>>& triangle) {
         if(triangle.empty()) return 0;
 
-        vector<int> dp(triangle.back());
+        vector<int> dp(triangle.back().back());
 
         int r = triangle.size();
         for(int i = r - 2; i >= 0 ; --i) {

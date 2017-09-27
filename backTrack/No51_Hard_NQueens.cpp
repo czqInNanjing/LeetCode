@@ -24,7 +24,7 @@
 #include <iostream>
 #include "vector"
 #include "string"
-#include "cmath"
+#include "cstdlib"
 
 using namespace std;
 
@@ -60,7 +60,7 @@ public:
 
             // check if they are on the diagonal
 
-            if (fabs(fabs(lastIndex - queenColumns[k]) - fabs(queenNum - 1 - k)) < 0.0001)
+            if (abs(lastIndex - queenColumns[k]) == abs(queenNum - 1 - k))
                 return false;
         }
 

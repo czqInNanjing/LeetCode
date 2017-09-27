@@ -49,13 +49,13 @@ struct BigInteger {
     }
 };
 
-int main() {
-//    string s = "123456789";
-//    BigInteger big = s;
-//    BigInteger bi2 = 123;
-//    cout << big << bi2;
-    string temp = "12345";
-
-    cout << atoi(temp.c_str());
-
-}
+//int main() {
+////    string s = "123456789";
+////    BigInteger big = s;
+////    BigInteger bi2 = 123;
+////    cout << big << bi2;
+//    string temp = "12345";
+//
+//    cout << atoi(temp.c_str());
+//
+//}

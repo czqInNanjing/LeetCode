@@ -10,10 +10,15 @@
 
 using namespace std;
 using namespace boost;
-//int main() {
-//
-//
-//
+int main() {
+    string str;
+//    while(true) {
+//        getline(cin, str); // 可以用来吃掉空串
+//        cout << str << endl;
+//        cout << "Just print a line" << endl;
+//    }
+
+
 //    ifstream fin("../CMakeLists.txt");
 //    string temp = " a  sddd ";
 //    trim(temp);
@@ -38,6 +43,8 @@ using namespace boost;
 //    }
 //
 //    fout.close();
-//
-//    cout << "File out put finished" << endl;
-//}
+
+
+
+    cout << "File out put finished" << endl;
+}
